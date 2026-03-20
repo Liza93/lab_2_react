@@ -1,31 +1,18 @@
 function Experience() {
-    return (
-        <section>
-            <h2>Профіль</h2>
-            <p>
-                Студентка спеціальності «Кібербезпека» з технічною базою в SQL та хмарних технологіях. 
-                Маю досвід стажування в SoftServe, де вчилася аналізувати складні системи. 
-                Як староста групи, розвинула навички комунікації та дисципліни, необхідні для роботи в умовах інцидентів.
-            </p>
-
-            <h2>Технічні навички (Hard Skills)</h2>
-            <ul>
-                <li>Бази даних: SQL (MySQL)</li>
-                <li>Мови програмування: C, C#, Python (базовий рівень)</li>
-                <li>Мережі: Робота з Cisco Packet Tracer</li>
-                <li>ОС: Linux (CLI), Windows</li>
-                <li>Безпека: Розуміння Cyber Kill Chain, SIEM та стандартів ISO/IEC 27001</li>
-            </ul>
-
-            <h2>Особисті якості (Soft Skills)</h2>
-            <ul>
-                <li>Аналітичне мислення та логічний підхід до вирішення проблем</li>
-                <li>Досвід лідерства та міжособистісного спілкування</li>
-                <li>Відповідальність та уважність до деталей</li>
-                <li>Здатність швидко навчатися та працювати під тиском</li>
-            </ul>
-        </section>
-    );
+  return (
+    <section className="bg-white p-8 my-8 border-2 border-slate-100 rounded-3xl shadow-lg transition-all hover:shadow-2xl">
+      <h2 className="text-3xl font-bold text-slate-800 mb-6 flex items-center gap-3">
+        <span className="w-8 h-8 bg-blue-600 rounded-full"></span>
+        Технічні навички
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {['SQL (MySQL)', 'Linux CLI', 'Cisco Packet Tracer', 'Cyber Kill Chain'].map((skill) => (
+          <div key={skill} className="p-4 bg-slate-50 rounded-xl border-l-4 border-blue-500 hover:bg-blue-50 hover:scale-105 transition-transform cursor-default">
+            {skill}
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
-
 export default Experience;
